@@ -1,0 +1,74 @@
+///
+/// Elemental by Pixelarity
+/// pixelarity.com | hello@pixelarity.com
+/// License: pixelarity.com/license
+///
+
+/* Major Icons */
+
+	ul.major-icons {
+		@include vendor('display', 'flex');
+		@include vendor('justify-content', 'center');
+		list-style: none;
+		margin: (_size(element-margin) * 1.5) 0;
+		padding: 0;
+
+		&:last-child {
+			margin-bottom: _size(element-margin);
+		}
+
+		li {
+			display: inline-block;
+			border-style: solid;
+			border-left-width: 1px;
+			min-width: 15em;
+			padding: 0;
+
+			&:first-child {
+				border-left: 0;
+				margin-left: 0;
+				padding-left: 0;
+			}
+
+			h3 {
+				font-size: 0.8em;
+			}
+
+			> :last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		@include breakpoint('<=small') {
+			@include vendor('flex-direction', 'column');
+
+			li {
+				min-width: 0;
+				width: 100%;
+				border-left-width: 0;
+				border-top-width: 1px;
+				margin: 2em 0 0 0;
+				padding: 2em 0 0 0;
+
+				&:first-child {
+					border-top: 0;
+					margin-top: 0;
+					padding-top: 0;
+				}
+
+				h3 {
+					font-size: 1em;
+				}
+			}
+		}
+	}
+
+	@mixin color-major-icons($p: null) {
+		ul.major-icons {
+			li {
+				border-color: _palette($p, border);
+			}
+		}
+	}
+
+	@include color-major-icons;

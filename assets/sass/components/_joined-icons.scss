@@ -1,0 +1,53 @@
+///
+/// Elemental by Pixelarity
+/// pixelarity.com | hello@pixelarity.com
+/// License: pixelarity.com/license
+///
+
+/* Joined Icons */
+
+	ul.joined-icons {
+		@include vendor('display', 'flex');
+		@include vendor('justify-content', 'center');
+		list-style: none;
+		padding: 0;
+
+		li {
+			border-style: solid;
+			border-width: 1px;
+			border-left-width: 0;
+			padding: 0;
+
+			a {
+				display: block;
+				width: 2.5em;
+				height: 2.5em;
+				line-height: 2.5em;
+			}
+
+			&:first-child {
+				border-left-width: 1px;
+				border-top-left-radius: _size(border-radius);
+				border-bottom-left-radius: _size(border-radius);
+			}
+
+			&:last-child {
+				border-top-right-radius: _size(border-radius);
+				border-bottom-right-radius: _size(border-radius);
+			}
+		}
+	}
+
+	@mixin color-joined-icons($p: null) {
+		ul.joined-icons {
+			li {
+				border-color: _palette($p, border);
+
+				a {
+					color: _palette($p, fg-light);
+				}
+			}
+		}
+	}
+
+	@include color-joined-icons;

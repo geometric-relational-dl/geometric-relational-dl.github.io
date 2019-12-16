@@ -1,0 +1,60 @@
+///
+/// Elemental by Pixelarity
+/// pixelarity.com | hello@pixelarity.com
+/// License: pixelarity.com/license
+///
+
+/* Icon */
+
+	.icon {
+		@include icon;
+		border-bottom: none;
+		position: relative;
+
+		> .label {
+			display: none;
+		}
+
+		&.solid {
+			&:before {
+				font-weight: 900;
+			}
+		}
+
+		&.brands {
+			&:before {
+				font-family: 'Font Awesome 5 Brands';
+			}
+		}
+
+		&.major {
+			display: block;
+			margin: 0 0 (_size(element-margin) * 0.25) 0;
+
+			&:before {
+				font-size: 3em;
+				margin-bottom: 0.25em;
+			}
+
+			@include breakpoint('<=small') {
+				margin: 0 0 (_size(element-margin) * 0.75) 0;
+
+				&:before {
+					font-size: 2em;
+					font-size: 30px;
+				}
+			}
+		}
+	}
+
+	@mixin color-icon($p: null) {
+		.icon {
+			&.major {
+				&:before {
+					color: _palette($p, fg-light);
+				}
+			}
+		}
+	}
+
+	@include color-icon;

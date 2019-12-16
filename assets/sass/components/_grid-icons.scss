@@ -1,0 +1,71 @@
+///
+/// Elemental by Pixelarity
+/// pixelarity.com | hello@pixelarity.com
+/// License: pixelarity.com/license
+///
+
+/* Grid Icons */
+
+	ul.grid-icons {
+		@include vendor('display', 'flex');
+		@include vendor('flex-wrap', 'wrap');
+		border-style: solid;
+		border-width: 1px;
+		border-left-width: 0;
+		list-style: none;
+		padding: 0;
+
+		li {
+			@include vendor('align-items', 'center');
+			@include vendor('display', 'flex');
+			border-style: solid;
+			border-width: 0;
+			border-left-width: 1px;
+			border-top-width: 1px;
+			min-height: 13em;
+			padding: 0;
+			text-align: center;
+			width: 50%;
+
+			&:nth-child(1),
+			&:nth-child(2) {
+				border-top-width: 0;
+			}
+
+			&:nth-child(2n - 1) {
+				border-left-width: 0;
+			}
+
+			> .inner {
+				width: 100%;
+
+				.icon {
+					margin: 0;
+				}
+
+				h3 {
+					font-size: 1em;
+					font-weight: _font(weight-extrabold);
+					margin: 0;
+				}
+			}
+		}
+
+		@include breakpoint('<=small') {
+			li {
+				min-height: 11em;
+			}
+		}
+	}
+
+	@mixin color-grid-icons($p: null) {
+		ul.grid-icons {
+			border-color: _palette($p, border);
+
+			li {
+				border-color: _palette($p, border);
+			}
+		}
+	}
+
+	@include color-grid-icons;
