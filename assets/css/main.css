@@ -117,7 +117,7 @@ input, select, textarea {
 
 	body {
 		background-color: #f7f7f7;
-		color: #222222;
+		color: #000000;
 	}
 
 	body, input, select, textarea {
@@ -131,7 +131,7 @@ input, select, textarea {
 		@media screen and (max-width: 1680px) {
 
 			body, input, select, textarea {
-				font-size: 12pt;
+				font-size: 12.5pt;
 			}
 
 		}
@@ -139,7 +139,7 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			body, input, select, textarea {
-				font-size: 11.5pt;
+				font-size: 12pt;
 			}
 
 		}
@@ -147,7 +147,7 @@ input, select, textarea {
 		@media screen and (max-width: 360px) {
 
 			body, input, select, textarea {
-				font-size: 10.5pt;
+				font-size: 12pt;
 			}
 
 		}
@@ -3931,7 +3931,7 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			.wrapper {
-				padding: 0em 3em 1em 3em ;
+				padding: 0em 2em 1em 2em ;
 			}
 
 				.wrapper.spotlight > .content {
@@ -3943,7 +3943,7 @@ input, select, textarea {
 		@media screen and (max-width: 480px) {
 
 			.wrapper {
-				padding: 0em 2em 1em 2em ;
+				padding: 0em 1em 1em 1em ;
 			}
 
 				.wrapper.spotlight > .content {
