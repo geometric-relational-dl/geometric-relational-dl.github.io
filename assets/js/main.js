@@ -79,30 +79,30 @@
 					//visibleClass: 'navPanel-visible'
 				});
 
-	// Spotlights.
-		$('.spotlight')
-			.each(function() {
-
-				var	$this = $(this),
-					$image = $this.find('.image'),
-					$img = $image.find('img'),
-					x;
-
-				// No image? Skip.
-					if ($image.length == 0)
-						return;
-
-				// Assign image.
-					$image.css('background-image', 'url(' + $img.attr('src') + ')');
-
-				// Set background position.
-					if (x = $img.data('position'))
-						$image.css('background-position', x);
-
-				// Hide <img>.
-					$img.hide();
-
-			});
+	// // Spotlights.
+	// 	$('.spotlight')
+	// 		.each(function() {
+	//
+	// 			var	$this = $(this),
+	// 				$image = $this.find('.image'),
+	// 				$img = $image.find('img'),
+	// 				x;
+	//
+	// 			// No image? Skip.
+	// 				if ($image.length == 0)
+	// 					return;
+	//
+	// 			// Assign image.
+	// 				$image.css('background-image', 'url(' + $img.attr('src') + ')');
+	//
+	// 			// Set background position.
+	// 				if (x = $img.data('position'))
+	// 					$image.css('background-position', x);
+	//
+	// 			// Hide <img>.
+	// 				$img.hide();
+	//
+	// 		});
 
 	// https://stackoverflow.com/questions/9979827/change-active-menu-item-on-page-scroll
 
