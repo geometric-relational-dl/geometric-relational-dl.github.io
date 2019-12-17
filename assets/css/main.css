@@ -3981,7 +3981,7 @@ input, select, textarea {
 		@media screen and (max-width: 480px) {
 
 			.wrapper {
-				padding: 0em 1em 1em 1em ;
+				padding: 0em 2em 1em 2em ;
 			}
 
 				.wrapper.spotlight > .content {
